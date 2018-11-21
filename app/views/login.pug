@@ -1,0 +1,14 @@
+html
+    head  
+      include ./head.pug
+    body
+        div(class="container col-md-6")
+          h2 Login Form  
+          form(action="/login" method="POST")
+            div(class="form-group")
+                label(for="username") Username: 
+                Input(type="text" class="form-control" name="username")
+            div(class="form-group")
+                label(for="password") Password: 
+                Input(type="password" class="form-control" name="password")  
+            button(type="submit" class="btn btn-primary") Submit  
