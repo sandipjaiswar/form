@@ -3,19 +3,20 @@ const app = express();
 const pug = require('pug');
 const router = express.Router()
 
-router.get('/', function(req,res){
- res.render('home');
+router.get('/', function (req, res) {
+    res.render('home');
 });
 
-router.get('/login', function(req,res){
-    console.log(req.body);    
-    
- res.render('login')
+router.get('/login', function (req, res) {
+    res.render('login');
 });
 
-router.post('/login', function(req, res){
-    console.log(req.body);    
-    res.send('Welcome '+ req.body.username)
+router.get('/signup', function (req, res) {
+    res.render('signup');
+});
+
+router.post('/login', function (req, res) {
+    res.send('Welcome ' + req.body.username)
 })
 
 module.exports = router
